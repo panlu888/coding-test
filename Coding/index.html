@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A simple backbone app</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+	<div class="container">
+		<div id="content" class="content"></div>
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>	
+	<script type="text/javascript" src="js/App.js"></script>
+	<script id="first" type="text/template">
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="exampleInputName2">First Name</label>
+				<input type="text" class="form-control" id="fname" placeholder="Jane..." autofocus />
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail2">Last Name</label>
+				<input type="text" class="form-control" id="lname" placeholder="Doe...">
+			</div>
+			<button type="button" class="btn btn-primary" id="nextpage">Next</button>
+		</form>
+	</script>
+	
+	<script id="second" type="text/template">
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="email">Address One</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="addOne" placeholder="Enter Address One" autofocus />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="pwd">Address Two</label>
+				<div class="col-sm-10"> 
+					<input type="text" class="form-control" id="addTwo" placeholder="Enter Address Two">
+				</div>
+			</div>
+			<div class="form-group"> 
+				<label class="control-label col-sm-2" for="pwd">City</label>
+				<div class="col-sm-10"> 
+					<input type="text" class="form-control" id="city" placeholder="Enter City">
+				</div>
+			</div>
+			<div class="form-group"> 
+				<label class="control-label col-sm-2" for="pwd">State</label>
+				<div class="col-sm-10"> 
+					<input type="text" class="form-control" id="state" placeholder="Enter State">
+				</div>
+			</div>
+			<div class="form-group"> 
+				<label class="control-label col-sm-2" for="pwd">ZipCode</label>
+				<div class="col-sm-10"> 
+					<input type="number" class="form-control" id="zipcode" placeholder="Enter ZipCode">
+				</div>
+			</div>
+			<div class="form-group"> 
+				<div class="col-sm-offset-4 col-sm-8">
+					<button type="button" class="btn btn-primary" id="complete">Finish</button>
+				</div>
+			</div>
+		</form>
+	</script>
+
+	<script id="third" type="text/template">
+		<table class="table">
+			<thead class="thead-inverse">
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Address One</th>
+					<th>Address Two</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><%= fname %></td>
+					<td><%= lname %></td>
+					<td><%= addOne %></td>
+					<td><%= addTwo %></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table class="table">
+			<thead class="thead-default">
+				<tr>
+					<th>City</th>
+					<th>State</th>
+					<th>ZipCode</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><%= city %></td>
+					<td><%= state %></td>
+					<td><%= zipcode %></td>
+				</tr>
+			</tbody>
+		</table>
+	</script>
+
+</body>
+</html>
